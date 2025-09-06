@@ -6,7 +6,7 @@ class TestRegistration:
     """Тесты авторегистрации форм"""
 
     def test_registry_content(self):
-        """Test registry content"""
+        
         registry = Shape._registry
         assert registry[1] == Circle
         assert registry[3] == Triangle
