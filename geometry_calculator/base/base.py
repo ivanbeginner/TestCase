@@ -4,7 +4,7 @@ from typing import Any, Dict, Type
 
 
 class Shape(ABC):
-    """Абстрактный базовый класс для всех геометрических фигур"""
+    
     _registry: Dict[int, Type['Shape']] = {}
     def __init_subclass__(cls, **kwargs):
         """Автоматическая регистрация всех подклассов"""
@@ -21,13 +21,12 @@ class Shape(ABC):
         return len([p for p in parameters if p != 'self'])
 
     @abstractmethod
-    def area(self) -> float:
-        """Вычислить площадь фигуры"""
+    def area(self) -> 
         pass
 
     @classmethod
     def create(cls, *args) -> 'Shape':
-        """Фабричный метод для создания фигур по аргументам"""
+        
         arg_count = len(args)
 
         if arg_count not in cls._registry:
