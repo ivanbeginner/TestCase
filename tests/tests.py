@@ -12,17 +12,16 @@ class TestRegistration:
         assert registry[3] == Triangle
 
     def test_circle_registered(self):
-        """Test Circle registration"""
         assert 1 in Shape._registry
         assert Shape._registry[1].__name__ == 'Circle'
 
     def test_triangle_registered(self):
-        """Test Triangle registration"""
+
         assert 3 in Shape._registry
         assert Shape._registry[3].__name__ == 'Triangle'
 
     def test_argument_count_detection(self):
-        """Test automatic argument count detection"""
+
         circle_args = Circle._get_expected_arg_count()
         triangle_args = Triangle._get_expected_arg_count()
 
