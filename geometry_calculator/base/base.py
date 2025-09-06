@@ -21,7 +21,7 @@ class Shape(ABC):
         return len([p for p in parameters if p != 'self'])
 
     @abstractmethod
-    def area(self) -> 
+    def area(self) -> float:
         pass
 
     @classmethod
